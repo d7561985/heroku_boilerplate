@@ -11,7 +11,13 @@
 ## Installation
 
 #### create app
-As we use github existent repo for handling our app we can create new app on UI and link it here too. About how to do it you can read [here](https://devcenter.heroku.com/articles/github-integration)
+As we use github existent repo for handling our app we can create new app on UI and link it here too.
+1. create app 
+2. add buildpack
+3. link github
+4. do deploy
+
+About how to do it you can read [here](https://devcenter.heroku.com/articles/github-integration)
 
 #### container stack
 For heroku deployment required container stack: `heroku stack:set container`. 

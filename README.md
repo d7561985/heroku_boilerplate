@@ -31,7 +31,10 @@ $ heroku apps
 ```
 
 #### container stack
-For heroku deployment required container stack: `heroku stack:set container --app={{.APP_NAME}}`. 
+For heroku deployment required container stack: 
+```
+$ heroku stack:set container --app={{.APP_NAME}}
+``` 
 Option in UI mode i didn't find for doing this.
 
 #### environments

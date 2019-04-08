@@ -14,11 +14,13 @@ I'm assume what you has heroku cli installed properly on development machine.
 
 #### create app
 As we use github existent repo for handling our app we can create new app on UI and link it here too.
-1. create app 
-2. add buildpack
-3. link github
-4. do deploy
-5. remember your app name. I use {{.APP_NAME}} template further with this name.
+1. create app
+1. remember your app name. I use {{.APP_NAME}} template further with this name. 
+1. here we should switch app to `container stack` mode through CLI. Look at `container stack` chapter.
+1. add buildpack
+1. link github
+1. do deploy
+
 About how to do it you can read [here](https://devcenter.heroku.com/articles/github-integration)
 
 Note:
@@ -33,7 +35,7 @@ For heroku deployment required container stack: `heroku stack:set container --ap
 Option in UI mode i didn't find for doing this.
 
 #### environments
-Our app should handle some env. variables:
+Heroku app should handle some env. variables:
 * PORT - http port from app witch will be exposed in https through heroku proxy
 * HEROKU_APP_NAME - actual slug of our app(optional). For enable this from console we should enable plugin: 
 ```bash

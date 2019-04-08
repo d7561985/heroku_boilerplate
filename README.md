@@ -1,5 +1,7 @@
 # Golang heroku boilerplate
 
+[![Build Status](https://travis-ci.org/d7561985/heroku_boilerplate.svg?branch=master)](https://travis-ci.org/d7561985/heroku_boilerplate)
+
 ## Introduction
 
 > Template for golang project for future deploy on heroku dyno `container stack` from repo deployed on Github

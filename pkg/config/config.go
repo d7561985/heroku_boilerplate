@@ -10,15 +10,17 @@ var V = &M{}
 func init() {
 	viper.AutomaticEnv()
 	viper.RegisterAlias("HEROKUSLUG", "HEROKU_APP_NAME")
+	viper.RegisterAlias("DATABASEHOST", "DATABASE_URL")
 	viper.SetDefault("PORT", "3000")
 
-	if err := read(); err != nil {
+	if err := Load(V); err != nil {
 		panic(err)
 	}
 }
 
-func read() error {
-	if err := viper.Unmarshal(V); err != nil {
+// Load read config for provided model.
+func Load(model interface{}) error {
+	if err := viper.Unmarshal(model); err != nil {
 		return err
 	}
 	return nil

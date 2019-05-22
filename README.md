@@ -39,9 +39,18 @@ $ heroku stack:set container --app={{.APP_NAME}}
 ``` 
 Option in UI mode i didn't find for doing this.
 
+#### database
+
+
+```
+$ heroku  addons:create heroku-postgresql:hobby-dev -a {{.APP_NAME}}
+```
+
+
 #### environments
 Heroku app should handle some env. variables:
 * PORT - http port from app witch will be exposed in https through heroku proxy
+* DATABASE_URL - database host
 * HEROKU_APP_NAME - actual slug of our app(optional). For enable this from console we should enable plugin: 
 ```bash
 $ heroku labs:enable runtime-dyno-metadata -a {{.APP_NAME}}
